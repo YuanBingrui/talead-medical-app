@@ -18,16 +18,24 @@ page-myself {
   .userIcon {
     padding:20px 0;
   }
-  .userIcon img{
-    width: 50px !important;
-    height: 50px !important;
+  .iconfontuser{
+    font-family: "iconfont" !important;
+    font-size: 50px;
+    color: #406795;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  .itemIcon img {
-    width: 40px;
-    height: 40px;
+  .iconfontitem{
+    font-family: "iconfont" !important;
+    font-size: 40px;
+    color: #406795;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .itemContent {
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -38,11 +46,20 @@ page-myself {
     width: 80%;
   }
   .itemContentArrow {
-    width: 10%;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px; 
   }
-  .itemContentArrow img{
-    width: 20px;
-    height: 20px;
+  .iconfontmore {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    color: #ccc;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .itemBoxInner {
     margin: 0 !important;

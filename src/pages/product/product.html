@@ -7,24 +7,24 @@
 <ion-content class="bgcolor">
   <div class="itemBox" (click)="gotoIntroduction()">
     <div class="itemIcon">
-      <img src="assets/icon/introductionIcon.png">
+      <i class="iconfontitem icon-computer"></i>
     </div>
     <div class="itemContent">
       <div class="itemContentWord">公司简介</div>
       <div class="itemContentArrow">
-        <img src="assets/icon/moreIcon.png">
+        <i class="iconfontmore icon-more"></i>
       </div>
     </div>
   </div>
   <div class="multiItemBox">
     <div *ngFor="let productone of productList" class="itemBox itemBoxInner" (click)="gotoProductDetail(productone.data)">
       <div class="itemIcon">
-        <img src="assets/icon/{{productone.IconName}}.png">
+        <i class="iconfontitem {{productone.IconName}}"></i>
       </div>
       <div class="itemContent">
         <div class="itemContentWord">{{productone.data.value}}</div>
         <div class="itemContentArrow">
-          <img src="assets/icon/moreIcon.png">
+          <i class="iconfontmore icon-more"></i>
         </div>
       </div>
     </div>

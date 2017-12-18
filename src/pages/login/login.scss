@@ -12,12 +12,16 @@ page-login {
     padding: 7px 10px;
     border-bottom: 1px #f8f8f8 solid;
   }
-  .inputBox img {
-    width: 30px;
-    height: 30px;
-  }
   .inputBox input {
     border: none;
     margin-left: 5px;
+  }
+  .iconfontlogo {
+    font-family: "iconfont" !important;
+    font-size: 30px;
+    color: #406795;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

@@ -22,9 +22,13 @@ page-home {
     display: flex;
     align-items: center;
   }
-  .cardHeaderIcon img {
-    width: 40px;
-    height: 40px;
+  .iconfontcard {
+    font-family: "iconfont" !important;
+    font-size: 40px;
+    color: #406795;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   .cardHeaderWord {
     margin-left: 5px;
