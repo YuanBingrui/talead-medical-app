@@ -1,6 +1,6 @@
 {
-  "name": "talead-medical",
-  "app_id": "",
+  "name": "taleadMedical",
+  "app_id": "io.ionic.taleadMedical",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
