@@ -1,26 +1,71 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# talead-medical
+A ionic-angular project application
 
-## How to use this template
+# Getting Started
+- Clone this repository.
+- Run `npm install` from the project root.
+- Install the ionic CLI (`npm install -g ionic@latest`).
+- Run `ionic serve` in a terminal from the project root.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
+# Run & Emulate on Android
+```
+npm install -g cordova@latest
+ionic cordova platform add android
+ionic cordova run android
 ```
 
-Then, to run it, cd into `myTabs` and run:
+# Development Environment
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+### > ionic info
+```
+cli packages: (C:\Users\YBR\AppData\Roaming\npm\node_modules)
+
+    @ionic/cli-utils  : 1.19.0
+    ionic (Ionic CLI) : 3.0.0
+
+global packages:
+
+    cordova (Cordova CLI) : 7.1.0
+
+local packages:
+
+    @ionic/app-scripts : 2.1.4
+    Cordova Platforms  : android 6.1.2
+    Ionic Framework    : ionic-angular 3.6.1
+
+System:
+
+    Android SDK Tools : 26.1.1
+    Node              : v6.9.1
+    npm               : 5.3.0
+    OS                : Windows 10
+
+Environment Variables:
+
+    ANDROID_HOME : D:\software\Android\sdk\
+
+Misc:
+
+    backend : pro
 ```
 
-Substitute ios for android if not on a Mac.
+### Access-Control-Allow-Origin Issue Solution
+- For Windows: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --args --disable-web-security --user-data-dir=C:\Temp
+- For MacOS: open -a "Google Chrome" --args --disable-web-security --user-data-dir=$HOME/Temp
 
+### Android Publishing (Password: R0adshare)
+```
+ionic cordova platform rm android
+ionic cordova platform add android
+ionic cordova build android --prod --release
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore platforms/android/build/outputs/apk/android-release-unsigned.apk alias_name
+zipalign -v 4 platforms/android/build/outputs/apk/android-release-unsigned.apk platforms/android/build/outputs/apk/talead-medical.apk
+```
+
+### iOS Release (Apple Cert Password: R0adshare)
+```
+ionic cordova platform rm ios
+ionic cordova platform add ios
+```
+- Xcode: Open project, General > Signing, Capabilities > Push Notification > On, Info > Localization native development region: China, Product > build
+- Xcode: Archive > Upload to App Store...
