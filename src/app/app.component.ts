@@ -17,6 +17,9 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      //初始化推送
+      let plugins = (window as any).plugins;
+      plugins && plugins.jPushPlugin && plugins.jPushPlugin.init();
     });
   }
 }
