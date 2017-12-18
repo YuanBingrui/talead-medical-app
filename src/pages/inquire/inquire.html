@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>查询</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bgcolor">
+  <div *ngIf="login.isLogin">
+    <div class="itemBox" *ngFor="let reportone of reportList" (click)="gotoreportDetail(reportone)">
+    	<div class="itemIconBox">
+    		<img src="assets/image/{{reportone.iconName}}.png">
+    	</div>
+    	<div class="itemContentBox">
+    	  <div class="itemWordBox">
+    	  	<div class="itemHeader">{{reportone.iconName}}</div>
+    	  	<div class="itemWordDes">报告简介：</div>
+    	  	<div class="itemWordDes">杭州泰领生物技术有限公司将分子诊断技术平台应用于病原体微生物的快速检测，可在短短数小时内为客户提供多种病原体微生物感染信息。</div>
+    	  </div>
+    	  <div class="itemDateBox">{{reportone.date}}</div>
+    	</div>
+    </div>
+  </div>
+  <div class="messageBox" (click)="gotoLogin()" [hidden]="login.isLogin">您还未登录，请登录查看</div>
+</ion-content>

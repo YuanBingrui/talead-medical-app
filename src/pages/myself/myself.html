@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>我</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bgcolor">
+  <div class="itemBox" (click)="gotoLogin()">
+    <div class="itemIcon userIcon">
+      <img src="assets/icon/myselfIcon.png">
+    </div>
+    <div class="itemContent">
+      <div class="itemContentWord" [hidden]="login.isLogin">登录/注册</div>
+      <div class="itemContentWord" *ngIf="login.isLogin">{{login.username}}</div>
+      <div class="itemContentArrow">
+        <img src="assets/icon/moreIcon.png">
+      </div>
+    </div>
+  </div>
+  <div class="itemBox">
+    <div class="itemIcon">
+      <img src="assets/icon/shoppingIcon.png">
+    </div>
+    <div class="itemContent">
+      <div class="itemContentWord">已购项目</div>
+      <div class="itemContentArrow">
+        <img src="assets/icon/moreIcon.png">
+      </div>
+    </div>
+  </div>
+  <div class="multiItemBox">
+    <div class="itemBox itemBoxInner">
+      <div class="itemIcon">
+        <img src="assets/icon/historyIcon.png">
+      </div>
+      <div class="itemContent">
+        <div class="itemContentWord">历史</div>
+        <div class="itemContentArrow">
+          <img src="assets/icon/moreIcon.png">
+        </div>
+      </div>
+    </div>
+    <div class="itemBox itemBoxInner">
+      <div class="itemIcon">
+        <img src="assets/icon/favoriteIcon.png">
+      </div>
+      <div class="itemContent">
+        <div class="itemContentWord">收藏</div>
+        <div class="itemContentArrow">
+          <img src="assets/icon/moreIcon.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="itemBox">
+    <div class="itemIcon">
+      <img src="assets/icon/helpIcon.png">
+    </div>
+    <div class="itemContent">
+      <div class="itemContentWord">帮助与反馈</div>
+      <div class="itemContentArrow">
+        <img src="assets/icon/moreIcon.png">
+      </div>
+    </div>
+  </div>
+  <div class="itemBox">
+    <div class="itemIcon">
+      <img src="assets/icon/settingIcon.png">
+    </div>
+    <div class="itemContent">
+      <div class="itemContentWord">设置</div>
+      <div class="itemContentArrow">
+        <img src="assets/icon/moreIcon.png">
+      </div>
+    </div>
+  </div>
+  <div class="btnBox">
+    <button ion-button block color="danger" [hidden]="!login.isLogin" (click)="logout()">退出当前账号</button>
+  </div>
+</ion-content>

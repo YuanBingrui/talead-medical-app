@@ -1,0 +1,65 @@
+page-inquire {
+  .bgcolor {
+    background-color: #eeeeee !important;
+  }
+  .itemBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+    margin: 1px 0 0 0;
+    padding: 10px;
+  }
+  .itemBox::before{
+    content: "";
+    position: absolute;
+    left: 60px;
+    top: 0;
+    right: 15px;
+    height: 1px;
+    border-top: 1px solid #ccc;
+    color: #ccc;
+  }
+  .itemBox:first-child:before{
+    display: none;
+  }
+  .itemIconBox img{
+  	box-shadow: 0 0 10px 1px #ccc;
+    width: 170px;
+  }
+  .itemContentBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+  }
+  .itemWordBox {
+
+  }
+  .itemHeader {
+  	font-size: 20px;
+  }
+  .itemWordDes {
+  	color: #999999;
+  	margin-top: 5px;
+  	display: -webkit-box;
+	  -webkit-box-orient: vertical;
+	  -webkit-line-clamp: 2;
+	  overflow: hidden;
+  }
+  .itemDateBox {
+  	margin-left: 10px;
+  	width: 100%;
+  }
+  .messageBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 20px;
+    width:100%;
+  }
+}

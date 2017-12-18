@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>产品</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bgcolor">
+  <div class="itemBox" (click)="gotoIntroduction()">
+    <div class="itemIcon">
+      <img src="assets/icon/introductionIcon.png">
+    </div>
+    <div class="itemContent">
+      <div class="itemContentWord">公司简介</div>
+      <div class="itemContentArrow">
+        <img src="assets/icon/moreIcon.png">
+      </div>
+    </div>
+  </div>
+  <div class="multiItemBox">
+    <div *ngFor="let productone of productList" class="itemBox itemBoxInner" (click)="gotoProductDetail(productone.data)">
+      <div class="itemIcon">
+        <img src="assets/icon/{{productone.IconName}}.png">
+      </div>
+      <div class="itemContent">
+        <div class="itemContentWord">{{productone.data.value}}</div>
+        <div class="itemContentArrow">
+          <img src="assets/icon/moreIcon.png">
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

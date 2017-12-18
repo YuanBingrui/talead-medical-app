@@ -1,17 +1,52 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-title>首页</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content class="bgcolor">
+  <div class="sliderBox">
+    <ion-slides autoplay="5000" pager loop>
+      <ion-slide>
+        <img src="assets/image/homeImg01.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/image/homeImg02.png">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/image/homeImg03.png">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="itemCardBox" *ngFor="let cardone of cardList" (click)="gotoNews(cardone)">
+    <div class="itemCardContent">
+      <div class="itemCardWord">
+        <div class="itemCardWordHeader">杭州泰领生物技术有限公司</div>
+        <div class="itemCardWordDes">
+          杭州泰领生物技术有限公司成立于2016年8月，位于杭州市高新（滨江）区-中国首家以体外诊断试剂为特色的国家级孵化器杭州
+        </div>
+      </div>
+      <div class="itemCardIcon">
+        <img src="assets/image/newsIcon.png">
+      </div>
+    </div>
+    <div class="itemCardDate">发布时间{{publishDate}}</div>
+  </div>
+  <div *ngIf="login.isLogin">
+    <div *ngFor="let cardone of cardList" class="cardBox" (click)="gotoInquire(cardone)">
+      <div class="cardHeader">
+        <div class="cardHeaderIcon">
+          <img src="assets/icon/inquireIcon.png">
+        </div>
+        <div class="cardHeaderWord">
+          <div class="cardHeaderWordDes">查询事宜</div>
+          <div class="cardHeaderWordDate">更新时间{{updateDate}}</div>
+        </div>
+      </div>
+      <div class="cardContent">
+        您有2条新的查询事宜，赶紧来看一下吧！
+      </div>
+      <div class="viewBtn">立即查看</div>
+    </div>
+  </div>
 </ion-content>

@@ -1,3 +1,87 @@
 page-home {
-
+  .sliderBox img {
+    height: 160px;
+    width: 100%;
+  }
+  .bgcolor {
+    background-color: #eeeeee !important;
+  }
+  .cardBox {
+    margin-top: 7px;
+    padding: 10px 0 0 0;
+    background-color: #fff;
+  }
+  .cardHeader {
+    padding: 0 0 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .cardHeaderIcon {
+    display: flex;
+    align-items: center;
+  }
+  .cardHeaderIcon img {
+    width: 40px;
+    height: 40px;
+  }
+  .cardHeaderWord {
+    margin-left: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cardHeaderWordDate{
+    font-size: 14px;
+    color: #999999;
+  }
+  .cardContent {
+    margin: 5px 10px 10px 55px;
+    font-size: 16px;
+  }
+  .viewBtn {
+    background-color: #F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    height: 30px;
+    color: #999999;
+  }
+  .itemCardBox {
+    padding: 10px;
+    background-color: #fff;
+    margin-top: 7px;
+  }
+  .itemCardContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .itemCardWord {
+    margin-right: 10px;
+  }
+  .itemCardWordHeader {
+    font-size: 20px;
+  }
+  .itemCardWordDes {
+    color: #999999;
+    margin-top: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .itemCardIcon img {
+    width: 180px;
+    border-radius: 5px;
+  }
+  .itemCardDate {
+    color: #999999;
+    font-size: 13px;
+    margin-top: 10px;
+  }
 }

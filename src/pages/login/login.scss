@@ -1,0 +1,23 @@
+page-login {
+  .multiInputBox {
+    background-color: #fff;
+    margin: 10px 0 20px 0;
+    padding: 7px 5px;
+  }
+  .inputBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 7px 10px;
+    border-bottom: 1px #f8f8f8 solid;
+  }
+  .inputBox img {
+    width: 30px;
+    height: 30px;
+  }
+  .inputBox input {
+    border: none;
+    margin-left: 5px;
+  }
+}

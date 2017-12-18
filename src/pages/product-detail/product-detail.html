@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bgcolor">
+  <div class="tableBox">
+    <table>
+      <tr>
+        <th>序号</th>
+        <th>名称(荧光PCR法)</th>
+      </tr>
+      <tr *ngFor="let productone of productList">
+        <td>{{productone.index}}</td>
+        <td>{{productone.name}}</td>
+      </tr>
+    </table>
+  </div>
+</ion-content>

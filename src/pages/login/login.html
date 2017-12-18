@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">取消</button>
+    </ion-buttons>
+    <ion-title>登录</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #loginForm="ngForm" novalidate>
+    <div class="multiInputBox">
+      <div class="inputBox">
+        <img src="assets/icon/usernameIcon.png">
+        <input type="text" name="username" placeholder="请输入账号" [(ngModel)]="login.username">
+      </div>
+      <div class="inputBox">
+        <img src="assets/icon/passwordIcon.png">
+        <input type="password" name="password" placeholder="请输入密码" [(ngModel)]="login.password">
+      </div>
+    </div>
+    <button ion-button block (click)="onLogin(loginForm)" type="submit">登录</button>
+  </form>
+</ion-content>
